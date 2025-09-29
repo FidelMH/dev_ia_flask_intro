@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="articles-container">
+    <h2>Articles</h2>
+    <div class="articles-list">
+        {% for article in articles %}
+            <article class="article-card">
+                <h3 class="article-title">{{ article.title }}</h3>
+                <p class="article-author">Par {{ article.author }}</p>
+            </article>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

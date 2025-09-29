@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="form-container">
+        <form action="/age" method="post" class="age-form">
+            <div class="form-group">
+                <label for="age">Votre âge :</label>
+                <input id="age" name="age" type="number" required min="0" max="150">
+            </div>
+            <button type="submit" class="submit-btn">Valider</button>
+        </form>
+        {% if age %}
+            <div class="result-message">
+                <span>Vous avez {{ age }} ans</span>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
