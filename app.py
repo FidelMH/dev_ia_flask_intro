@@ -81,7 +81,13 @@ def get_users():
 def page_not_found(error):
     return render_template('404.html'), 404
 
-# @app.route('/search')
-# def search():
+@app.route('/search')
+def search():
+    q = request.args.get('q','')
+    print(q)
+    return q
 
-# TODO exo 12
+
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
