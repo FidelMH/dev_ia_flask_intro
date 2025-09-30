@@ -1,4 +1,5 @@
 import sqlite3
+from sqlalchemy import create_engine,text
 
 class Data:
     def __init__(self) -> None:
@@ -26,10 +27,18 @@ class Data:
             users.append({'id':id, 'username':username})
         return users
 
-data = Data()
+# data = Data()
 # data.add_user('Fidel')
 # data.add_user('Marie')
 # data.add_user('Jeanne')
 # data.add_user('Paul')
 # data.add_user('Marc')
 # print(data.get_users())
+
+
+# engine = create_engine('sqlite+pysqlite:///database.db' ,echo=True)
+# print(engine)
+
+# with engine.connect() as conn:
+#     result = conn.execute(text('SELECT * FROM users'))
+#     print(result.all())
